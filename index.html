@@ -10,6 +10,35 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/jumbotron.css">
 <link rel="stylesheet" type="text/css" href="css/animate.css">
+<script>
+    $(document).ready(function() {
+        $("#pic-container-lg").css("height", $("#about-text").height());
+
+        $('a[href*=#]').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+          && location.hostname == this.hostname) {
+            $('.navbar-collapse.in').collapse('hide');
+            var $target = $(this.hash);
+            $target = $target.length && $target
+            || $('[name=' + this.hash.slice(1) +']');
+            if ($target.length) {
+              var targetOffset = $target.offset().top;
+              $('html,body')
+              .animate({scrollTop: targetOffset}, 750);
+             return false;
+            }
+          }
+        });
+    });
+    $(window).resize(function() {
+        $("#pic-container-lg").css("height", $("#about-text").height());
+    });
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') ) {
+            $(this).collapse('hide');
+        }
+    });
+    </script>
 </head>
 
 
@@ -37,10 +66,10 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#"><span class="glyphicon glyphicon-home" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Home</font></a></li>
         <li><a href="#About"><span class="glyphicon glyphicon-user" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> About</font></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-education" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Education</font></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-wrench" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Work</font></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-console" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Languages</font></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-earphone" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Contact</font></a></li>
+        <li><a href="#Education"><span class="glyphicon glyphicon-education" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Education</font></a></li>
+        <li><a href="#Work"><span class="glyphicon glyphicon-wrench" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Work</font></a></li>
+        <li><a href="#Languages"><span class="glyphicon glyphicon-console" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Languages</font></a></li>
+        <li><a href="#Contact"><span class="glyphicon glyphicon-earphone" style="color:#FDF3E7" aria-hidden="true"></span><font color="#FDF3E7"> Contact</font></a></li>
       </ul>
     </div>
     </div>
@@ -50,21 +79,54 @@
 
         <h1 class="name animated fadeInDown">Corey Kluesner</h1>
     </div>
-    <div class="anchor" id="About"></div>
-    
+<div class="anchor" id="About"></div>
     <section class="about">
       <div class="container">
         <div class="row">
           <div class="col-sm-7" id="about_text">
           <h1>About Me</h1>
           <p>I am currently a junior majoring in Computer Science at the Missouri University of Science
-          and Technology.</p>
+          and Technology. After going to East Central Community College in Union, MO, I decided that this
+          school would be a perfect place to develop my skillset to become what I've always wanted since the
+          age of 15: A software developer.</p>
+          <br>
+          <p>When I'm not busy with class, meetings, schoolwork, or programming, I enjoy spending my time
+          in the gym, longboarding, playing any kind of sport, or having a few beers with some friends. Trivia
+          is also a not so well known passion of mine. </p>
           </div>
 
           <div class="col-sm-5" id="pic-container-lg" style="height: 280px;">
             <div id="profile-pic"></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <div class="anchor" id="Education"></div>
+    <section class="education">
+      <div class="container">s
+        <h1 style="text-align:center">Education</h1>
+      </div>
+    </section>
+
+    <div class="anchor" id="Work"></div>
+    <section class="work">
+      <div class="container">
+        <h1 style="text-align:center">Work</h1>
+      </div>
+    </section>
+
+    <div class="anchor" id="Languages"></div>
+    <section class="languages">
+      <div class="container">
+        <h1 style="text-align:left">Languages</h1>
+      </div>
+    </section>
+
+    <div class="anchor" id="Contact"></div>
+    <section class="contact">
+      <div class="container">
+        <h1 style="text-align:right">Contact</h1>
       </div>
     </section>
 

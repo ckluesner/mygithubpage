@@ -24,7 +24,7 @@
     font-size: 112px;
     text-align: center;
     text-shadow: -2px -2px 2px #000;
-    font-family: "Futura";
+    font-family: "Garamond";
 }
 
 section {
@@ -32,7 +32,7 @@ section {
   display: flex;
   position: relative;
   align-items: center;
-  min-height: calc(100vh - 10vh);
+  min-height: calc(100vh - 54px);
 }
   
   @media screen and (max-width: 767px) {
@@ -47,11 +47,13 @@ section {
     font-weight: bold;
     letter-spacing: 1px;
     margin-top: 0;
+    text-align: left;
   }
 
   section p  {
     font-size: 17px;
     line-height: 1.6em;
+    text-align: justify;
   }
  
   section.about {
@@ -79,9 +81,9 @@ section {
       }
         @media screen and (max-width: 767px) {
           section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 75px;
+            width: 200px;
+            height: 200px;
+            border-radius: 0px;
             position: absolute;
             top: 50%;
             margin-left: -75px;
@@ -93,8 +95,8 @@ section {
         @media screen and (min-width: 768px) {
           section.about #pic-container-lg #profile-pic, section.about #pic-container-sm #profile-pic {
             box-shadow: -2px -2px 2px #000;
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
             border-radius: 0px;
             position: absolute;
             top: 50%;
@@ -107,6 +109,51 @@ section {
       min-height: 200px;
       margin-bottom: 15px;
     }
+
+    section.education{
+      background:#74AFAD;
+      background-size: cover;
+      background-position: center;
+    }
+
+      section.education.container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+    section.work{
+      background:#7E8F7C;
+      background-size: cover;
+      background-position: center;
+    }
+
+      section.work.container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+    section.languages{
+      background:#558C89;
+      background-size: cover;
+      background-position: center;
+    }
+
+      section.languages.container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+    section.contact{
+      background:#74AFAD;
+      background-size: cover;
+      background-position: center;
+    }
+
+      section.contact.container {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
 
         
       
