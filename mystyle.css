@@ -63,13 +63,17 @@
         box-shadow: 0 0 10px #3a1716;
         border: none;
         color: #eeeadd;
-        font-size: 14px;
       }
 
       .thumbnail img {
           width: 100%;
           height: 100%;
           margin-bottom: 15px;
+      }
+
+      #myModal{
+        top: 15%;
+        outline: none;
       }
 
 /*---------------TIMELINE-----------------*/
