@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </head>
 <body>
-
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,7 +22,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#abpit">About</a></li>
+        <li><a href="#company">About</a></li>
         <li><a href="#preOrder">Pre-Order</a></li>
         <li><a href="#thomasAngus">Thomas Angus</a></li>
         <li><a href="#ILS">ILS</a></li>
@@ -40,7 +40,7 @@
 </div>
 
 <div class="container-fluid" id="company">
-  <div class="row">
+  <div class="row slideanim">
     <div class="col-sm-8">
       <h2>About</h2>
       <h4>Steak With A Story is an up and coming platform that is intended to provide a face for the hardworking farmers and ranchers behind an industry that might seem to be dominated by factory farms and corporate companies.</h4></br>
@@ -54,7 +54,7 @@
 </div>
 
 <div class="container-fluid" id="timelineContainer">
-  <div class="container">
+  <div class="container slideanim">
     <div class="row">
       <div class="col-lg-12">
         <h2 class="text-center">Goals</h2>
@@ -148,6 +148,43 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== ""){
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 1100, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  })
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+      if (pos < winTop + 600) {
+        $(this).addClass("slide");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

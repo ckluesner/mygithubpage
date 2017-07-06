@@ -1,31 +1,28 @@
- .navbar {
-      font-family: Montserrat, sans-serif;
-      margin-bottom: 0;
-      background-color: #3e3d37;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      opacity: 0.90;
-      z-index: 9999;
+       .navbar {
+            font-family: Montserrat, sans-serif;
+            margin-bottom: 0;
+            background-color: #3e3d37;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            opacity: 0.90;
+            z-index: 9999;
       }
-      .navbar li a, .navbar .navbar-brand { 
-          color: #eeeadd !important;
+      .navbar li a, .navbar .navbar-brand {
+          color: #fff !important;
       }
-      .navbar-nav li a:hover {
+      .navbar-nav li a:hover, .navbar-nav li.active a {
           color: #3e3d37 !important;
-          background-color: #eeeadd;
-      }
-      .navbar-nav li.active a {
-          color: #3e3d37 !important;
-          background-color: #eeeadd !important;
+          background-color: #fff !important;
       }
       .navbar-default .navbar-toggle {
           border-color: transparent;
-          color: #3e3d37;
+          color: #fff !important;
       }
       .navbar-default .navbar-toggle .icon-bar {
-        background-color: #eeeadd;
+          background-color: #eeeadd;
       } 
 
       .jumbotron {
@@ -322,4 +319,39 @@
   margin: 0px 0px;
   font-family: Montserrat, sans-serif;
   color: #eeeadd;
+}
+
+/*---------SLIDE IN ANIMS-----------*/
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(30%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
 }
