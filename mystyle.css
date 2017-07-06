@@ -51,9 +51,25 @@
           margin: 25px 0;
         }
       }
-      #company {
+      #company, #stories {
         background-color: #814c49;
         color: #eeeadd;
+      }
+
+      .thumbnail {
+        padding: 0 0 15px 0;
+        margin: 40px 30px 15px 0;
+        background-color: #3e3d37;
+        box-shadow: 0 0 10px #3a1716;
+        border: none;
+        color: #eeeadd;
+        font-size: 14px;
+      }
+
+      .thumbnail img {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 15px;
       }
 
 /*---------------TIMELINE-----------------*/
@@ -115,10 +131,10 @@
     z-index: 100;
     position: absolute;
     left: 50%;
-    border: 7px solid #646b60;
+    border: 7px solid #814c49;
     border-radius: 100%;
-    background-color: #646b60;
-    box-shadow: 0 0 5px #646b60;
+    background-color: #814c49;
+    box-shadow: 0 0 5px #814c49;
     width: 200px;
     height: 200px;
     margin-left: -100px;
@@ -183,11 +199,11 @@
     left: 690px;
     width: 4px;
     height:340px;
-    background-color: #646b60;
+    background-color: #814c49;
     -ms-transform: rotate(-44deg); /* IE 9 */
     -webkit-transform: rotate(-44deg); /* Safari */
     transform: rotate(-44deg);
-    box-shadow: 0 0 5px #646b60;
+    box-shadow: 0 0 5px #814c49;
 }
 /*Style for odd div.line*/
 .timeline>li:nth-child(even) .line:before  {
@@ -198,11 +214,11 @@
     left: 450px;
     width: 4px;
     height:340px;
-    background-color: #646b60;
+    background-color: #814c49;
     -ms-transform: rotate(44deg); /* IE 9 */
     -webkit-transform: rotate(44deg); /* Safari */
     transform: rotate(44deg);
-    box-shadow: 0 0 5px #646b60;
+    box-shadow: 0 0 5px #814c49;
 }
 /* Medium Devices, .visible-md-* */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -315,7 +331,7 @@
 
 #timelineContainer {
   background-color: #3e3d37;
-  padding: 15px 5px;
+  padding: 100px 5px;
   margin: 0px 0px;
   font-family: Montserrat, sans-serif;
   color: #eeeadd;
